@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript(17055)</title>
+</head>
+<body>
+	<div>
+		<h2>Question 1</h2>
+		<p id="q1"></p>
+		<script type="text/javascript">
+			document.getElementById("q1").innerHTML = navigator.appVersion;
+		</script>
+	</div>
+	<div>
+		<h2>Question 2</h2>
+		<h3>Hover over the image</h3>
+		<div id="q2" style="padding: 30px;">
+			<button><a href = "https://www.linkedin.com/pulse/study-tamil-nadus-health-centers-ds-capstone-project-vivekanandam/?trackingId=pluHgFiUSs6CCT3C0zRfvw%3D%3D" onMouseOver = "document.myImage.src = image2.src;" onMouseOut = "document.myImage.src = image1.src;">
+	        <img name = "myImage" src = "klematis2_small.jpg">
+	    	</a></button>
+		    <script type="text/javascript">
+		    	var color = [, "#3C9EE7", "#E7993C", "#E73C99", "#3CE746", "#E7993C"]; 
+				if(document.images) {
+					var image1 = new Image();     
+				    image1.src = "klematis_big.jpg";
+				    var image2 = new Image();     
+				    image2.src = "klematis3_big.jpg";
+				}
+				document.querySelector("#q2").addEventListener(
+					"mouseover", function () {
+						document.querySelector("div#q2").style.background = color[Math.floor(Math.random() * color.length)];
+					}); 
+		    </script>
+		</div>
+	</div>
+	<div>
+		<h2>Question 3</h2>
+		<p>Hover over Laptop, Phone and Coffee cup for more details</p>
+		<img src="https://www.w3schools.com/tags/workplace.jpg" alt="Workplace" usemap="#workmap" width="400" height="379">
+		<map name="workmap">
+  			<area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.html"
+  			onMouseOver="writeText('Click on the laptop in the above image for more details.')">
+  			<area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.html" onMouseOver="writeText('Click on the mobile phone in the above image for more details.')">
+  			<area shape="circle" coords="337,300,44" alt="Cup of coffee" href="coffee.html" onMouseOver="writeText('Click on the coffee cup in the above image for more details.')">
+		</map> 
+		<p id="q3"></p>
+		<script type="text/javascript">
+						function writeText(txt) {
+				document.getElementById("q3").innerHTML=txt;
+			}
+		</script>
+	</div>
+	<div>
+		<h2>Question 4</h2>
+		<p>Click the input button</p>
+		<button onclick="input()">Input</button>
+		<p id="q4"></p>
+		<script type="text/javascript">
+			function input() {
+					pop = prompt("Enter the count of values in the series", " ");
+					console.log(pop);
+				 	var var1=0, var2=1;
+				 	fib = "Here is the fibonacci series : " +var1+" "+var2+" ";
+					var counter, sum;
+					for(counter=2; counter<pop; counter++) {
+						sum=var1+var2;
+						fib = fib + sum + " ";
+						var1=var2;
+						var2=sum;
+					}
+				document.getElementById("q4").innerHTML = fib;
+			}
+		</script>
+	</div>
+	<div>
+		<h2>Question 5</h2>
+		<p id="q5"></p>
+		<button onclick="inp()">Input Values</button>
+		<button onclick="sort()">Sort  Values</button>
+		<script type="text/javascript">
+			var inputArray = [];
+			var size = 10; 
+			function inp() {
+				for(var i=0; i<size; i++) {
+					inputArray[i] = prompt('Enter value ' + (i+1)+' of 10');
+				}
+				for(var i=0; i<size; i++) {
+					document.getElementById("q5").innerHTML = inputArray;
+				}
+			}
+			function sort() {
+				inputArray.sort();
+				document.getElementById("q5").innerHTML = inputArray;
+			}
+		</script>
+	</div>
+	<div>
+		<h2>Question 6</h2>
+		<button onclick="simpl()">Calculate Simple Interest</button>
+		<p id="q6"></p>
+		<script type="text/javascript">
+			function simpl() {
+				    var p,r,t;
+				    p=parseFloat(prompt("Enter Principle Amount"));
+				    r=parseFloat(prompt("Enter Rate Amount"));
+				    t=parseFloat(prompt("Enter no. of years"));
+				    var si=(p*r*t)/100;
+				    document.getElementById("q6").innerHTML = "Simple Interest (calculated anually) is: "+si;
+				}
+		</script>
+	</div>
+</body>
+</html>
+

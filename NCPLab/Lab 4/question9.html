@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Image properties</title>
+        <style>
+            img.prop{
+                width:"400";
+                height:"300";
+                opacity:0.5;
+            }
+            img.prop:hover{
+                opacity: 1.1;
+            }
+            .back{
+                background: url("klematis2_small.jpg") repeat;
+                height: 400px;
+            }
+            .tbox{
+                background-color:purple;
+                opacity: 0.7;
+                width: 50%;
+                left:25%;
+                top:25%;
+                position: relative;
+                height: 100px;
+                text-align:center;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <div>
+            <p>Creating transparent images - mouseover effect</p>
+            <img class="prop" src="klematis_big.jpg" alt="klematis big"/>
+        </div>
+        <div class="back">
+            <div class="tbox">
+                <p>Creating a transparent box with text on a background image</p>
+            </div>
+        </div>
+    </body>
+</html>

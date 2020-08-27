@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Table Properties</title>
+    </head>
+    <style>
+        table {
+  border-collapse: collapse;
+  border: 1px solid black;
+} 
+
+th,td {
+  border: 1px solid black;
+}
+
+table.a {
+  table-layout: auto;
+  width: 180px;  
+  caption-side: bottom;
+}
+table.ex1 {
+  empty-cells: hide;
+}
+table, td, th {
+  border: 1px solid black;
+}
+
+#table1 {
+  border-collapse: separate;
+  border-spacing:15px;
+}
+#table2 {
+  border-collapse: collapse;
+  border-spacing:10px;
+}
+    </style>
+    <body>
+        <table class="a">
+            <tr>
+              <th>Company</th>
+              <th>Contact</th>
+              <th>Country</th>
+            </tr>
+            <tr>
+              <td>Suzuki</td>
+              <td>MS Automoboiles</td>
+              <td>Japan</td>
+            </tr>
+            <tr>
+              <td>Nestle</td>
+              <td>Nestle Industries </td>
+              <td>India</td>
+            </tr>
+            <tr>
+              <td>HP</td>
+              <td>Hp Company</td>
+              <td>China</td>
+            </tr>
+          </table>
+          <br>
+          <br>
+          <table class="ex1" border="1">
+            <tr>
+              <td>Kevin</td>
+              <td>Nike</td>
+            </tr>
+            <tr>
+              <td>Louis</td>
+              <td></td>
+            </tr>
+          </table>
+          <br>
+          <br>
+          <table id="table1">
+            <tr>
+              <th>Firstname</th>
+              <th>Lastname</th>
+            </tr>
+            <tr>
+              <td>Patloon</td>
+              <td>Gold</td>
+            </tr>
+            <tr>
+              <td>Louis</td>
+              <td>Gangaram</td>
+            </tr>
+          </table>
+          <br>
+          <br>
+          <table id="table2">
+            <tr>
+              <th>Firstname</th>
+              <th>Lastname</th>
+            </tr>
+            <tr>
+              <td>Peter</td>
+              <td>Mike</td>
+            </tr>
+            <tr>
+              <td>Raymond</td>
+              <td>Girish</td>
+            </tr>
+          </table>
+    </body>
+</html>
